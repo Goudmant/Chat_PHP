@@ -2,7 +2,7 @@
 
 require_once("modelDbConnect.php");
 
-class ChatManager extends DbConnect {
+class MessageManager extends DbConnect {
     
     //Récupère tous les messages du tableau.
     //@param : pas de paramètre, donc on utilise query
