@@ -9,7 +9,7 @@
 </head>
 <body>
 <div id="container">
-	<h1>Le Chat NavyFlo</h1>
+	<h1>Mon super chat</h1>
 
         <!-- Statut //////////////////////////////////////////////////////// -->				
 	<table class="status"><tr>
@@ -29,10 +29,10 @@
             <div id="annonce"></div>
 		<div id="text">
 			<div id="loading">
-				<!--<center>
+				<center>
                     <span class="info" id="info">Chargement du chat en cours...</span><br />
                     <img src="ajax-loader.gif" alt="patientez...">
-				</center>-->
+				</center>
 			</div>
 		</div>
 	</td>

@@ -1,7 +1,7 @@
 version: "3"
 services:
   web:
-    container_name: Chat_PHP-nginx
+    container_name: PDO-nginx
     env_file: docker.env
     image: nginx:alpine
     volumes:
@@ -17,7 +17,7 @@ services:
       - php
       - mysqldb
   php:
-    container_name: Chat_PHP-php
+    container_name: PDO-php
     env_file: docker.env
     image: crunchgeek/php-fpm:7.1
     restart: always
@@ -29,7 +29,7 @@ services:
   mysqldb:
     env_file: docker.env
     image: mysql:5.7
-    container_name: Chat_PHP-mysql
+    container_name: PDO-mysql
     restart: always
     ports:
       - "8989:3306"
@@ -39,7 +39,7 @@ services:
       # and to use it to populate our database.
   myadmin:
     image: phpmyadmin/phpmyadmin:4.8.1
-    container_name: Chat_PHP-phpmyadmin
+    container_name: PDO-phpmyadmin
     ports:
       - "8081:80"
     restart: always
