@@ -37,5 +37,6 @@ if(!user_verified()) {
 } else {
 ?>
 <table class="post_message"><tr>
+	
 </body>
 </html>
