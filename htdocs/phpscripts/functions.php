@@ -5,10 +5,9 @@
         try {
             $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
             // INFORMATIONS DE CONNEXION
-            $host = 	'nom d\' hote';
-            $dbname = 	'nom de la base';
-            $user = 	'nom d\'utilisateur';
-            $password = 	'mot de passe';
+            $id = 	'nom d\' hote';
+            $pseudo = 	'nom d\'utilisateur';
+            $password = 	'mot de passe'; // ou $mail = ? 
             // FIN DES DONNEES
             
             $db = new PDO('mysql:host='.$host.';dbname='.$dbname.'', $user, $password, $pdo_options);

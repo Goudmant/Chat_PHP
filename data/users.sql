@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : mysqldb
--- Généré le :  mar. 15 déc. 2020 à 08:33
+-- Généré le :  mar. 15 déc. 2020 à 15:42
 -- Version du serveur :  5.7.32
 -- Version de PHP :  7.2.5
 
@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `users` (
   `id` smallint(6) NOT NULL,
-  `pseudo` varchar(50) NOT NULL,
-  `mail` varchar(40) NOT NULL,
-  `password` varchar(8) NOT NULL
+  `pseudo` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `mail` varchar(40) CHARACTER SET utf8 NOT NULL,
+  `password` varchar(40) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

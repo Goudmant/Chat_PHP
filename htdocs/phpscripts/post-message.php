@@ -17,17 +17,7 @@ if(user_verified()) {
 			// Vérification de la similitude
 			if($count != 0)
 				similar_text($data['message_text'], $_POST['message'], $percent);
-
-			if($percent < 80) {
-				// Vérification de la date du dernier message.
-				if(time()-5 >= $data['message_time']) {
-
-					// YES ! ON PEUT CONTINUER ! Ouiiiii.
-
-				} else
-					echo 'Votre dernier message est trop récent. Baissez le rythme :D';	
-			} else
-				echo 'Votre dernier message est très similaire.';	
+	
 		} else
 			echo 'Votre message est vide.';	
 	} else

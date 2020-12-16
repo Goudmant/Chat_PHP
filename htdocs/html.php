@@ -29,10 +29,10 @@
             <div id="annonce"></div>
 		<div id="text">
 			<div id="loading">
-				<center>
+				<!--<center>
                     <span class="info" id="info">Chargement du chat en cours...</span><br />
                     <img src="ajax-loader.gif" alt="patientez...">
-				</center>
+				</center>-->
 			</div>
 		</div>
 	</td>

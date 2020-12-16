@@ -7,10 +7,10 @@ $db = db_connect();
 <?php
 /* On vérifie d'abord que le compte existe, si ce n'est pas le cas, 
 on s'arrête, on supprime les sessions et on renvoie 0. */
-$checkUser = $db->prepare("SELECT * FROM chat_accounts WHERE account_id = :id AND account_login = :login ");
+$checkUser = $db->prepare("SELECT * FROM chat_accounts WHERE account_id = :id AND account_pseudo = :login ");
 $checkUser->execute(array(
 	'id' => $_SESSION['id'],
-	'login' => $_SESSION['login']
+	'pseudo' => $_SESSION['pseudo']
 ));	
 $countUser = $checkUser->rowCount();
 if($countUser == 0) {
