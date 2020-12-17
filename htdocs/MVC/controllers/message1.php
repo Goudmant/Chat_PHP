@@ -3,7 +3,7 @@ class message extends Controller{
 
     function index (){
         $d = array();
-        $this->loadModel ('messagem');
+        $this->loadModel ('message2');
         $this->messagem->table;
         $d['id'] = array(
             'pseudo' => 'Navy',
