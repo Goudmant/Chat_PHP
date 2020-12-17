@@ -8,7 +8,7 @@ require(ROOT.'core/controller.php');
 mysql_connect('localhost','root','');
 mysql_select_db('users');
 
-$param = explode('/',$_GET['p']);
+$params = explode('/',$_GET['p']);
 $controller = $params[0];
 $action = isset($params[1]) ? $params[1] : 'index';
 
