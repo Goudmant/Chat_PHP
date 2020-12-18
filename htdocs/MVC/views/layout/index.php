@@ -1,5 +1,41 @@
-<h1>Flo ? <h1>
-<?php echo $content_for_layout; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projet de groupe chat-PHP</title>
+</head>
+<body>
+<h1><h1>
+    <form> method="POST" action="">
+        <h4>Votre pseudo : <input type="text" name="pseudo"></h4>
+        <h4>Votre message : <input type="text" name="message"></h4>
+        <input type="submit" name="submit" value="envoyer">   
+    </form>
+</div>
+<div class="message">
+
+<?php 
+echo $content_for_layout; 
+//conection a la base de donnees 
+include ('');
+$afficher = $bdd->query("SELECT * FROM 'users' ORDER BY id DESC LIMIT 'ROOT, 'ROOT' ");
+while ($donnees = $afficher->fetch()) {
+?>
+
+<p>
+    <?php echo $donnees['dates_heure']; ?> <strong><?php echo $donnees['pseudo']; ?> ; </strong> <?php echo $donnees['message']; ?>
+</p>
+<?php 
+}
+$afficher->closeCursor();
+?>
+</div>
+</body>
+</html>
+
+
+
 
 
 
