@@ -3,17 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat-PHP</title>
+    <title>projet de groupe chat-PHP</title>
 </head>
 <body>
-    <h1>NavyFlo BlablaChat<h1>
+<h1>BlablaChat sY tV A-N le FLO !<h1>
+    <form method="POST" action=""> <!--fichier ? -->
+        <h4>Votre pseudo : <input type="text" name="pseudo"></h4>
+        <h4>Votre message : <input type="text" name="message"></h4>
+        <input type="submit" name="submit" value="envoyer">   
+    </form>
+    </div>
+        <div class="message">
 
-    <?php 
-    echo $content_for_layout; 
-    ?>
+        <?php 
+        echo $content_for_layout; 
+        //connection a la base de donnees 
+        include (''); //fichier ?
+        $afficher = $bdd->query("SELECT * FROM 'users' ORDER BY id DESC LIMIT 'ROOT, 'ROOT' ");
+        while ($donnees = $afficher->fetch()) {
+        ?>
 
-
-
-    <p>Merci de rester courtois</p>
+        <p>
+            <?php echo $donnees['dates_heure']; ?> <strong><?php echo $donnees['pseudo']; ?> ; </strong> <?php echo $donnees['message']; ?>
+        </p>
+        <?php 
+        }
+        $afficher->closeCursor();
+        ?>
+    </div>
 </body>
 </html>
+
+
+
+
+
+
+<p> Ici le footer</p>
