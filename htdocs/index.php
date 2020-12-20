@@ -6,37 +6,31 @@
     <title>projet de groupe chat-PHP</title>
 </head>
 <body>
-<h1>BlablaChat sY tV A-N le FLO !<h1>
-    <form method="POST" action=""> <!--fichier ? -->
-        <h4>Votre pseudo : <input type="text" name="pseudo"></h4>
-        <h4>Votre message : <input type="text" name="message"></h4>
-        <input type="submit" name="submit" value="envoyer">   
-    </form>
+<h1>BlablaChat Le NavyFlo !<h1>
+    <div class="form">
+        <form method="POST" action="chat_post.php">
+            <h4>Votre pseudo : <input type="text" name="pseudo"></h4>
+            <h4>Votre message : <input type="text" name="message"></h4>
+            <input type="submit" name="submit" value="envoyer">   
+        </form>
     </div>
-        <div class="message">
-
+    <div class="message">
         <?php 
-        echo $content_for_layout; 
-        //connection a la base de donnees 
-        include (''); //fichier ?
-        $afficher = $bdd->query("SELECT * FROM 'users' ORDER BY id DESC LIMIT 'ROOT, 'ROOT' ");
+        try {
+        include ('config.php');
+        $afficher = $bdd->query("SELECT * FROM users ORDER BY id DESC LIMIT 0,7");
         while ($donnees = $afficher->fetch()) {
         ?>
-
         <p>
-            <?php echo $donnees['dates_heure']; ?> <strong><?php echo $donnees['pseudo']; ?> ; </strong> <?php echo $donnees['message']; ?>
+        <?php echo $donnees['dates_heure']; ?> <strong><?php echo $donnees['pseudo']; ?> ; </strong> <?php echo $donnees['message']; ?>
         </p>
         <?php 
         }
-        $afficher->closeCursor();
+    }
+        catch (Exception $e) {
+            die('Erreur : ' .$e->getMessage());
+        }
         ?>
     </div>
 </body>
 </html>
-
-
-
-
-
-
-<p> Ici le footer</p>

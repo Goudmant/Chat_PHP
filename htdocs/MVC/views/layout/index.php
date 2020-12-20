@@ -18,7 +18,7 @@
         <?php 
         try {
         include ('controller.php');
-        $afficher = $bdd->query("SELECT * FROM 'users' ORDER BY id DESC LIMIT 'ROOT, 'ROOT' ");
+        $afficher = $bdd->query("SELECT * FROM users ORDER BY id DESC LIMIT 0,7");
         while ($donnees = $afficher->fetch()) {
         ?>
         <p>
